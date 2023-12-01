@@ -1,34 +1,7 @@
 
-/* H I D I N G   E L E M E N T S */
-/* Comment or uncomment depending of what elements you want to hide */
-
-/* hide new "extensions" icon 
-#unified-extensions-button {display: none !important;}*/
-/* hide "Overflow" icon */
-#nav-bar-overflow-button { display: none !important; }
-
-/* hide "Zoom" indicator */
-#urlbar-zoom-button { display: none !important; }
-
-/* hide "Shield" icon */
-#tracking-protection-icon-container { display: none !important }
-
-/* hide "Site information" button */
-#identity-box { display: none !important }
-
-/* hide "tab list" */
-#alltabs-button { display: none !important; }
-
-/* hide "panel button" */
-#PanelUI-button { display: none !important } 
-
-/*hide forward button
-#forward-button{ display: none !important} */ 
-
-
  /* ----- move tab close button to the left ----- */
 
- .tabbrowser-tab:not(:hover) .tab-close-button{
+ /*.tabbrowser-tab:not(:hover) .tab-close-button{
   padding-inline: 0px !important;   
   opacity:0;
   display: none !important;
@@ -45,6 +18,10 @@
  .tabbrowser-tab:not([pinned="true"]):hover .tab-icon-stack {
    -moz-box-ordinal-group: 99999 !important;
  }
+/* H I D I N G   E L E M E N T S */
+/* Comment or uncomment depending of what elements you want to hide */
+
+
  .tabbrowser-tab:not([pinned="true"]):hover .tab-icon-stack:not([indicator-replaces-favicon]) {
    display: none;
  }
@@ -80,7 +57,7 @@ margin-left: 13px !important;
 
 /* main */
 :root {
-  --navbarWidth     : 350px; /* Set width of navbar. Use px for a fixed width 
+  --navbarWidth     : 200px; /* Set width of navbar. Use px for a fixed width 
                                 or vw for a percentage of your window. */
   --animationSpeed  : 0.15s;
 }
@@ -97,7 +74,8 @@ margin-left: 13px !important;
 #urlbar-input {
   transition: transform .1s linear;
   transform: none !important;
-  padding-left: 13px !important;
+  padding-left: 5px !important;
+
 }
 
 /*============================================================================*/
@@ -105,6 +83,7 @@ margin-left: 13px !important;
 
 #TabsToolbar {
   margin-left : var(--navbarWidth) !important;
+  scroll-margin-left: var(--navbarWidth);
   margin-bottom  : -14px !important;
 }
 
@@ -113,11 +92,11 @@ margin-left: 13px !important;
 }
 
 #urlbar-container {
-  min-width   : 100px !important;
+  min-width   : 50px !important;
 }
 
 #urlbar[breakout][breakout-extend] {
-  min-width: 60px !important;
+  min-width: 20px !important;
 }
 
 :root[uidensity="compact"] #nav-bar {
@@ -147,22 +126,19 @@ margin-left: 13px !important;
 
 
 /* Simplifying interface */
-
 #nav-bar {
   background  : none !important;
   box-shadow  : none !important;
   
 }
-
-
 .titlebar-spacer {
   display     : -moz-box !important;
-  width      : 20px !important;
+  width      : 5px !important;
 }
 
 #urlbar-background,#urlbar {
   margin-top: 0.7px;
-  margin-left: 6px;
+  margin-left: 2px;
   border: 0px !important;
   border-radius: 5px !important;
   opacity: 0.9 !important;
@@ -182,8 +158,8 @@ margin-left: 13px !important;
   color       : transparent !important;
 }
 
-/*#urlbar:hover .urlbar-icon,
-#urlbar:active .urlbar-icon, */
+#urlbar:hover .urlbar-icon,
+#urlbar:active .urlbar-icon, 
 #urlbar[focused] .urlbar-icon {
  fill        : var(--toolbar-color) !important;
 }
@@ -303,7 +279,7 @@ tab[visuallyselected] .tab-background::before,
 .tabbrowser-tab .tab-background:not([selected]) {
   border: 0 !important;
   border-radius: 6px 6px 6px 6px !important;
-  background-color: rgb(160,160,160,0.1) !important;
+  background-color: rgba(36, 39, 58, 1) !important;
 }
 
 /* Normal tabs design on hover */
